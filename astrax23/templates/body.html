@@ -18,3 +18,28 @@
     </div>
 </section>
 <div class="container-md my-2"><hr/></div>
+
+{% comment %} Teams {% endcomment %}
+
+<section class="page-section container px-4 px-lg-5 text-center" id="keynotes">
+    <h2 class="mt-2 mb-4">Team</h2>
+    <div class="keynote-container">
+        {%for team in team_members%}
+        <div class="keynote">
+            <div class="key-detail">
+                
+                <img src={{team.image.url}} alt={{team.name}}>
+               
+                <div class="name">{{team.name}}</div>
+            </div>
+            <div class="info">
+                {{team.designation}}
+            </div>
+            <div>{{team.relationship_status}}</div>
+        </div>
+        {%endfor%}
+        
+    </div>
+</section>
+
+
